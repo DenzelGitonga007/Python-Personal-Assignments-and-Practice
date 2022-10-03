@@ -7,7 +7,14 @@ print("Name: {} | Year of Birth: {} | Country: {}".format(employee[0], employee[
 print("In the deparment: %s"%(Dep[0])) # Using the %s
 
 # Replacing an entry on the list
-cars = ["Vitz", "Mazda", "Mercedes"] # Original list
+cars = ["Vitz", "Mazda", "Mercedes", "Pegeout", "Dodge"] # Original list
 print("This is the original list: {}".format(cars))
 cars[2] = "Demio" #Replace
 print("The list after adding an entity: %s"%(cars[:]))
+# Deleting an element in the list
+del cars[3] #Using the del keyword
+print("After deleting an element: {}".format(cars[:]))
+cars.remove("Vitz") # Using the remove method
+print("Deleting using the remove method: %s"%(cars[:]))
+popping = cars.pop(-1)
+print("Popping the last element from the list: '{}', new list is:{}".format(popping,cars))
