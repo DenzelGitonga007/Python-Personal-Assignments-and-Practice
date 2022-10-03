@@ -18,3 +18,9 @@ cars.remove("Vitz") # Using the remove method
 print("Deleting using the remove method: %s"%(cars[:]))
 popping = cars.pop(-1)
 print("Popping the last element from the list: '{}', new list is:{}".format(popping,cars))
+# Replicating a list
+numbers = [1, 2, 3, 4, 5]
+print(numbers*2)
+# Concatinating lists
+letters = ["a", "b", "c", "d", "e"]
+print(numbers + letters)
