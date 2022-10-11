@@ -10,3 +10,10 @@ print("Set union: " + str(a | b))
 # Still union
 print(a.union(b))
 print(b.union(a))
+
+# Intersection
+num_1 = {1, 2, 3, 4, 5,}
+num_2 = {4, 5, 6, 7, 8}
+print("The set num_1 = {}, and set num_2 = {}".format(num_1, num_2) )
+# Only the common elements
+print("The set intersection/common elements: " + str(num_1 & num_2))
