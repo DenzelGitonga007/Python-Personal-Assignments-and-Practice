@@ -6,3 +6,7 @@ b = {3, 4, 5, 6}
 print("a and b are both {}".format(type(a)))
 print("Set a = {} and set b = {}".format(a, b))
 print("Set union: " + str(a | b))
+
+# Still union
+print(a.union(b))
+print(b.union(a))
