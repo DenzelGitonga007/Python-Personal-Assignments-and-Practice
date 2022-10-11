@@ -25,4 +25,8 @@ value_2 = {30, 40, 60, 80, 90}
 print("The set value_1 = {}, and set value_2 is {}".format(value_1, value_2))
 print("Set difference value_1 - value_2 = " + str(value_1 - value_2))
 print("And value_2 - value_1" + str(value_2 - value_1))
-print("Using the difference() method, also works: " + str(value_1.difference(value_2)))
+print("Using the difference() method, also works: " + str(value_1 ^ value_2))
+
+# Symmetric difference
+print("Elements in value_1 and value_2 but not in both: " + str(value_1.symmetric_difference(value_2)))
+print(value_1.symmetric_difference(value_2))
