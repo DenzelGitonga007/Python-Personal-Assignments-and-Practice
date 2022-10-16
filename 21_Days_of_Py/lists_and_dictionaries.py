@@ -1,6 +1,7 @@
 # Creating a list of favorite movies, 
 # and assigning them to different genres
 # and display the output as key-value pair
+print("..........Shall we try to classify your favorite movies..........?")
 movies = []
 # set the limit of users' movies list
 limit = int(input("How many movies do you have in mind? "))
@@ -21,6 +22,8 @@ for key in range(0, limit):
     key = str(input())
     genres[key] = movies
     genres.update(zip(genres, movies))
-print(genres)
-    # for group, movie in genres.items():
-    #     print("My favorite movie genre is {}. One such movie is {}".format(group, movie))
+# Now the dictionary is compiled, with the genres and the movies
+# Iterate the dictionary therefore, to display each movie with
+# its respective genre
+for elements in genres.keys():
+    print(f'My favorite movie genre is {elements}. One such movie or series is {genres[elements]} ')
