@@ -1,4 +1,7 @@
-# Generating qrcode
+# pip install qrcode
+# pip install pillow
+# from PIL import Image
+# # Generating qrcode
 # Import the module
 import qrcode
 #import the image
