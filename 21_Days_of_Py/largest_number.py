@@ -10,9 +10,15 @@ def largest_number(numbers):
     limit = int(input("Please enter how many numbers do you wish to test from? "))
     # Get input based on limit
     for values in range(0, limit):
-        values = int(input())
-        # Append the values onto the list
-        numbers.append(values)
+        while True: # Only take numbers
+            try:
+                values = int(input())
+                # Append the values onto the list
+                numbers.append(values)
+                break # Stops at limit
+            except:
+                print("That's an invalid input, please enter numbers only")
+        
     # Get the largest value
     print("The values you entered are: {}".format(numbers))
     print("Arranged in ascending order: {}".format(sorted(numbers)))
