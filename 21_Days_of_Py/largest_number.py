@@ -9,7 +9,8 @@ def largest_number(numbers):
             limit = int(input("Please enter how many numbers do you wish to test: "))
             break
         except:
-            print("Please enter a number: ")
+            print("Invalid input, system can only take numbers")
+    print("Please key them in: ")
     for values in range(0, limit):
         # Take only numbers
         while True:
