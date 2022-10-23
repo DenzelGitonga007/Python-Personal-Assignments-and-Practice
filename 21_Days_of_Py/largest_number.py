@@ -1,28 +1,29 @@
-# Create a function that prints the largest number in a list
-# Create the function
-print("...Get the largest number amongst many...")
+#A function to return the largest number in a list
+print("...Get the largest number in a list...")
 def largest_number(numbers):
-    # The help
-    """ Prints out the largest number in a list """
-    # # Initialize the list
-    # numbers = []
-    # Set a limit for the list
-    limit = int(input("Please enter how many numbers do you wish to test from? "))
-    # Get input based on limit
+    """Get the largest number in a list""" #help
+    # Set the limit for the list
+    # Take only numbers
+    while True:
+        try:
+            limit = int(input("Please enter how many numbers do you wish to test: "))
+            break
+        except:
+            print("Please enter a number: ")
     for values in range(0, limit):
-        while True: # Only take numbers
+        # Take only numbers
+        while True:
             try:
                 values = int(input())
-                # Append the values onto the list
+                # Append the values into the numbers list
                 numbers.append(values)
-                break # Stops at limit
+                break
             except:
-                print("That's an invalid input, please enter numbers only")
-        
-    # Get the largest value
-    print("The values you entered are: {}".format(numbers))
+                print("Please enter numbers only: ")
+    print("The numbers you entered are: {}".format(numbers))
     print("Arranged in ascending order: {}".format(sorted(numbers)))
-    print("The largest amongst these is: {}".format(max(numbers)))
+    results = print("The largest of these is: {}".format(max(numbers)))
+    return results
 # Initialize the list
 numbers = []
 # Call the function
