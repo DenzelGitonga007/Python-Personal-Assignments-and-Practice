@@ -16,4 +16,3 @@ while True:
 # The variable holding the date
 set_date = datetime(a, b, c)
 print("The date {} was on {}".format(set_date.strftime("%Y-%m-%d"), set_date.strftime("%A")))
-# print(set_date.strftime("%A"))
