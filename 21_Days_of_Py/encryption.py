@@ -32,5 +32,14 @@ def encrypt (word, n):
         # Access the alphabets with their index
         for index, value in enumerate(alphabet,1):
             if letter == value:
-                print("The letter {} is in index {} of the alphabet".format(letter, index))
+                # Setting how many times to encrypt, based on n
+                encryption_count = 0
+                while (encryption_count<n):
+                    # Multiply the index by 3 and minus 5
+                    index = (index * 3)-5
+                    encryption_count += 1
+                    # Append these index to the encrypted_word
+                    encrypted_word.append(index)
+    return ("It's encryption format is: " + str(encrypted_word))
+# Call the function
 print(encrypt(word, n))
