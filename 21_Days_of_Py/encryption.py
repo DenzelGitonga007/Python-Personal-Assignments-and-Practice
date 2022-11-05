@@ -38,8 +38,29 @@ def encrypt (word, n):
                     # Multiply the index by 3 and minus 5
                     index = (index * 3)-5
                     encryption_count += 1
-                    # Append these index to the encrypted_word
-                    encrypted_word.append(index)
+                # Append these index to the encrypted_word
+                encrypted_word.append(index)
     return ("It's encryption format is: " + str(encrypted_word))
 # Call the function
 print(encrypt(word, n))
+
+# Decryption
+def decrypt(encrypted_word, n):
+    # Help
+    """Decrypt the text"""
+    # Create the decryption list
+    decrypted_word = []
+    for number in encrypted_word:
+        # Check how many times to loop
+        counter = 0
+        while (counter<n):
+            number = int((number + 5) / 3)
+            counter += 1
+        for index, value in enumerate(alphabet,1):
+            if number == index:
+                decrypted_word.append(value)
+    # Print the original word
+    originalword = ''.join(decrypted_word)
+    return ("The decryption is: " + str(originalword))
+# Call the function
+print(decrypt(encrypted_word, n))
