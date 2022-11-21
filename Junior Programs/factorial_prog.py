@@ -11,3 +11,9 @@ for values in range(1, user_num + 1):
     # To multiply the values
     multiply = multiply * values
 print("The factorial is: ", multiply)
+
+# Method 2: Math.factorial method
+import math
+# Get user input
+user_num_2 = int(input("Enter another number: "))
+print("{} factorial is: ".format(user_num_2), math.factorial(user_num_2))
