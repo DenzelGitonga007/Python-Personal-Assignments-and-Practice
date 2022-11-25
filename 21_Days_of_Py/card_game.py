@@ -27,8 +27,13 @@
 
 
 print("...Card Game...")
+print()
+print("Players are: Ed, Grace, Linus")
+print()
 # Declare the list of card numbers and select 4 cards to assign to Ed, Grace, and Linus
 cards = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+print("The cards available are: ", cards)
+print()
 # Randomly select the cards and assign them to the players
 import random
 Ed = sorted(random.sample(cards, 4))
@@ -36,21 +41,27 @@ Ed = sorted(random.sample(cards, 4))
 for Ed_cards in Ed:
     cards.remove(Ed_cards)
 print("After giving Ed {} cards, the cards that remain are: {}".format(Ed, cards))
+print()
 # Give to Grace also
 Grace = sorted(random.sample(cards, 4))
 # To ensure that cards assigned to Grace are not in the list anymore
 for Grace_cards in Grace:
     cards.remove(Grace_cards)
 print("After giving Grace {} cards, the cards that remain are: {}".format(Grace, cards))
+print()
 # Give to Linus
 Linus = sorted(random.sample(cards, 4))
 # To ensure that cards assigned to Linus are not in the list anymore
 for Linus_cards in Linus:
     cards.remove(Linus_cards)
 print("After giving Ed {} cards, the cards that remain are: {}".format(Linus, cards))
-
+print()
+print("The players are now ready to play: ")
+print()
 print("Ed: ",Ed)
+print()
 print("Grace: ",Grace)
+print()
 print("Linus: ",Linus)
 
 
