@@ -101,14 +101,15 @@ def card_game(Ed, Grace, Linus):
         print("...Round One Closed...")
     else:
         print("...Round One Closed...")
-    # View the scoreboard as the round_one_scores
-    print()
-    print("...Check out the scores now...")
-    print("The scoreboard: ", round_one_scores)
     # Getting the winner of the first round
     round_one_winner = max(round_one_scores, key=round_one_scores.get)
     print("And round one winner is {} with {} points".format(round_one_winner, round_one_scores.get(round_one_winner)))
+    # View the scoreboard as the round_one_scores
     print()
+    print("...Check out the scores...")
+    print("The scoreboard: ", round_one_scores)
+    print()
+    # Round Two
     print("...Round Two...")
     print("Cards remaining...")
     print("Ed: ", Ed)
@@ -116,7 +117,262 @@ def card_game(Ed, Grace, Linus):
     print("Linus: ", Linus)
     print()
     # The winner of the first round plays next
-    
+    if round_one_winner == "Ed":
+        print("Ed plays first because he won the first round")
+        Ed_round_two = random.sample(Ed, 1)
+        # Remove the card
+        Ed.remove(Ed_round_two[0]) # Because Ed_round_two is a list
+        print("He plays with card {} and remains with {} cards".format(Ed_round_two, Ed))
+        # Add the score to the round_two_scores
+        round_two_scores = {
+            "Ed" : Ed_round_two[0]
+        }
+    elif round_one_winner == "Grace":
+        print("Grace plays first because she won the first round")
+        Grace_round_two = random.sample(Grace, 1)
+        # Remove the card
+        Grace.remove(Grace_round_two[0]) # Because Grace_round_two is a list
+        print("She plays with card {} and remains with {} cards".format(Grace_round_two, Grace))
+        # Add the score to the round_two_scores
+        round_two_scores = {
+            "Grace" : Grace_round_two[0]
+        }
+    else:
+        print("Linus plays first because he won the first round")
+        Linus_round_two = random.sample(Linus, 1)
+        # Remove the card
+        Linus.remove(Linus_round_two[0]) # Because Linus_round_two is a list
+        print("He plays with card {} and remains with {} cards".format(Linus_round_two, Linus))
+        # Add the score to the round_two_scores
+        round_two_scores = {
+            "Linus" : Linus_round_two[0]
+        }
+    # The other players to play as well
+    print()
+    if len(Ed) != 2: #If Ed hasn't already played, or given out one more card
+        print("Ed plays next... ... ...")
+        Ed_round_two = random.sample(Ed, 1)
+        # Remove the card
+        Ed.remove(Ed_round_two[0])
+        print("He plays with card {} and remains with {}".format(Ed_round_two, Ed))
+        # Update the score to the round_two_scores
+        round_two_scores["Ed"] = Ed_round_two[0]
+        print()
+    else:
+        print("Grace or Linux play next...")
+    if len(Grace) != 2: #If Grace hasn't already played, or given out one more card
+        print("Grace playing... ... ...")
+        Grace_round_two = random.sample(Grace, 1)
+        # Remove the card
+        Grace.remove(Grace_round_two[0])
+        print("She plays with card {} and remains with {}".format(Grace_round_two, Grace))
+        # Update the score to the round_two_scores
+        round_two_scores["Grace"] = Grace_round_two[0]
+        print()
+    else:
+        print("Linux next...")
+    if len(Linus) != 2: #If Grace hasn't already played, or given out one more card
+        print("Linus playing... ... ...")
+        Linus_round_two = random.sample(Linus, 1)
+        # Remove the card
+        Linus.remove(Linus_round_two[0])
+        print("He plays with card {} and remains with {}".format(Linus_round_two, Linus))
+        # Update the score to the round_two_scores
+        round_two_scores["Linus"] = Linus_round_two[0]
+        print()
+        print("...Round Two Closed...")
+    else:
+        print("...Round Two Closed...")
+
+    # Getting the winner of the second round
+    round_two_winner = max(round_two_scores, key=round_two_scores.get)
+    print("And round two winner is {} with {} points".format(round_two_winner, round_two_scores.get(round_two_winner)))
+    # View the scoreboard as the round_one_scores
+    print()
+    print("...Check out the scores...")
+    print("The scoreboard: ", round_two_scores)
+    print()
+    # Round three
+    print("...Round Three...")
+    print("Cards remaining...")
+    print("Ed: ", Ed)
+    print("Grace: ",Grace)
+    print("Linus: ", Linus)
+    print()
+    # The winner of the second round plays next
+    if round_two_winner == "Ed":
+        print("Ed plays first because he won in the second round")
+        Ed_round_three = random.sample(Ed, 1)
+        # Remove the card
+        Ed.remove(Ed_round_three[0]) # Because Ed_round_three is a list
+        print("He plays with card {} and remains with {} card".format(Ed_round_three, Ed))
+        # Add the score to the round_three_scores
+        round_three_scores = {
+            "Ed" : Ed_round_three[0]
+        }
+    elif round_two_winner == "Grace":
+        print("Grace plays first because she won in the second round")
+        Grace_round_three = random.sample(Grace, 1)
+        # Remove the card
+        Grace.remove(Grace_round_three[0]) # Because Grace_round_three is a list
+        print("She plays with card {} and remains with {} card".format(Grace_round_three, Grace))
+        # Add the score to the round_three_scores
+        round_three_scores = {
+            "Grace" : Grace_round_three[0]
+        }
+    else:
+        print("Linus plays first because he won the second round")
+        Linus_round_three = random.sample(Linus, 1)
+        # Remove the card
+        Linus.remove(Linus_round_three[0]) # Because Linus_round_three is a list
+        print("He plays with card {} and remains with {} card".format(Linus_round_three, Linus))
+        # Add the score to the round_three_scores
+        round_three_scores = {
+            "Linus" : Linus_round_three[0]
+        }
+    # The other players to play as well
+    print()
+    if len(Ed) != 1: #If Ed hasn't already played, or given out one more card
+        print("Ed plays next... ... ...")
+        Ed_round_three = random.sample(Ed, 1)
+        # Remove the card
+        Ed.remove(Ed_round_three[0])
+        print("He plays with card {} and remains with {}".format(Ed_round_three, Ed))
+        # Update the score to the round_three_scores
+        round_three_scores["Ed"] = Ed_round_three[0]
+        print()
+    else:
+        print("Grace or Linux play next...")
+    if len(Grace) != 1: #If Grace hasn't already played, or given out one more card
+        print("Grace playing... ... ...")
+        Grace_round_three = random.sample(Grace, 1)
+        # Remove the card
+        Grace.remove(Grace_round_three[0])
+        print("She plays with card {} and remains with {}".format(Grace_round_three, Grace))
+        # Update the score to the round_three_scores
+        round_three_scores["Grace"] = Grace_round_three[0]
+        print()
+    else:
+        print("Linux next...")
+    if len(Linus) != 1: #If Grace hasn't already played, or given out one more card
+        print("Linus playing... ... ...")
+        Linus_round_three = random.sample(Linus, 1)
+        # Remove the card
+        Linus.remove(Linus_round_three[0])
+        print("He plays with card {} and remains with {}".format(Linus_round_three, Linus))
+        # Update the score to the round_three_scores
+        round_three_scores["Linus"] = Linus_round_three[0]
+        print()
+        print("...Round Three Closed...")
+    else:
+        print("...Round Three Closed...")
+
+    # Getting the winner of the third round
+    round_three_winner = max(round_three_scores, key=round_three_scores.get)
+    print("And round three winner is {} with {} points".format(round_three_winner, round_three_scores.get(round_two_winner)))
+    # View the scoreboard as the round_three_scores
+    print()
+    print("...Check out the scores...")
+    print("The scoreboard: ", round_three_scores)
+    print()
+    # Round four
+    print("...Round Four...")
+    print("Cards remaining...")
+    print("Ed: ", Ed)
+    print("Grace: ",Grace)
+    print("Linus: ", Linus)
+    print()
+    # The winner of the four round plays next
+    if round_three_winner == "Ed":
+        print("Ed plays first because he won in the third round")
+        Ed_round_four = random.sample(Ed, 1)
+        # Remove the card
+        Ed.remove(Ed_round_four[0]) # Because Ed_round_four is a list
+        print("He plays with card {} and remains with {} card".format(Ed_round_four, Ed))
+        # Add the score to the round_four_scores
+        round_four_scores = {
+            "Ed" : Ed_round_four[0]
+        }
+    elif round_three_winner == "Grace":
+        print("Grace plays first because she won in the third round")
+        Grace_round_four = random.sample(Grace, 1)
+        # Remove the card
+        Grace.remove(Grace_round_four[0]) # Because Grace_round_three is a list
+        print("She plays with card {} and remains with {} card".format(Grace_round_four, Grace))
+        # Add the score to the round_four_scores
+        round_four_scores = {
+            "Grace" : Grace_round_four[0]
+        }
+    else:
+        print("Linus plays first because he won the third round")
+        Linus_round_four = random.sample(Linus, 1)
+        # Remove the card
+        Linus.remove(Linus_round_four[0]) # Because Linus_round_four is a list
+        print("He plays with card {} and remains with {} card".format(Linus_round_four, Linus))
+        # Add the score to the round_four_scores
+        round_four_scores = {
+            "Linus" : Linus_round_four[0]
+        }
+    # The other players to play as well
+    print()
+    if len(Ed) != 0: #If Ed hasn't already played, or given out one more card
+        print("Ed plays next... ... ...")
+        Ed_round_four = random.sample(Ed, 1)
+        # Remove the card
+        Ed.remove(Ed_round_four[0])
+        print("He plays with card {} and remains with {}".format(Ed_round_four, Ed))
+        # Update the score to the round_four_scores
+        round_four_scores["Ed"] = Ed_round_four[0]
+        print()
+    else:
+        print("Grace or Linux play next...")
+    if len(Grace) != 0: #If Grace hasn't already played, or given out one more card
+        print("Grace playing... ... ...")
+        Grace_round_four = random.sample(Grace, 1)
+        # Remove the card
+        Grace.remove(Grace_round_four[0])
+        print("She plays with card {} and remains with {}".format(Grace_round_four, Grace))
+        # Update the score to the round_four_scores
+        round_four_scores["Grace"] = Grace_round_four[0]
+        print()
+    else:
+        print("Linux next...")
+    if len(Linus) != 0: #If Grace hasn't already played, or given out one more card
+        print("Linus playing... ... ...")
+        Linus_round_four = random.sample(Linus, 1)
+        # Remove the card
+        Linus.remove(Linus_round_four[0])
+        print("He plays with card {} and remains with {}".format(Linus_round_four, Linus))
+        # Update the score to the round_four_scores
+        round_four_scores["Linus"] = Linus_round_four[0]
+        print()
+        print("...Round Four Closed...")
+    else:
+        print("...Round Four Closed...")
+
+    # Getting the winner of the fourth round
+    round_four_winner = max(round_four_scores, key=round_four_scores.get)
+    print("And round four winner is {} with {} points".format(round_four_winner, round_four_scores.get(round_four_winner)))
+    # View the scoreboard as the round_four_scores
+    print()
+    print("...Check out the scores...")
+    print("The scoreboard: ", round_four_scores)
+    print()
+
+
+
+
+
+
+    # Add the winners to a general dictionary
+    winners = {
+        round_one_winner : round_one_scores.get(round_one_winner),
+        round_two_winner : round_two_scores.get(round_two_winner),
+        round_three_winner : round_three_scores.get(round_two_winner),
+        round_four_winner : round_four_scores.get(round_four_winner)
+    }
+    print("General score is: ", winners)
+
 
 
 print("...Card Game...")
@@ -160,6 +416,7 @@ round_one_scores = {}
 round_two_scores = {}
 round_three_scores = {}
 round_four_scores = {}
+winners = {}
 card_game(Ed, Grace, Linus)
 
 
