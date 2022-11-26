@@ -116,24 +116,7 @@ def card_game(Ed, Grace, Linus):
     print("Linus: ", Linus)
     print()
     # The winner of the first round plays next
-    if round_one_winner == "Ed":
-        print("Ed plays first because he won the first round")
-        Ed_round_two = random.sample(Ed, 1)
-        # Remove the card
-        Ed.remove(Ed_round_two[0]) # Because Ed_round_two is a list
-        print("Ed plays with card {} and remains with {} cards".format(Ed_round_two, Ed))
-    elif round_one_winner == "Grace":
-        print("Grace plays first because she won the first round")
-        Grace_round_two = random.sample(Grace, 1)
-        # Remove the card
-        Grace.remove(Grace_round_two[0]) # Because Grace_round_two is a list
-        print("Grace plays with card {} and remains with {} cards".format(Grace_round_two, Grace))
-    else:
-        print("Linus plays first because he won the first round")
-        Linus_round_two = random.sample(Linus, 1)
-        # Remove the card
-        Linus.remove(Linus_round_two[0]) # Because Linus_round_two is a list
-        print("Linus plays with card {} and remains with {} cards".format(Linus_round_two, Linus))
+    
 
 
 print("...Card Game...")
