@@ -25,7 +25,12 @@
 # Tip
 # Players can actually play DUMB moves, especially Grace and Linus.
 
-
+# Function to play
+def card_game(Ed, Grace, Linus):
+    """...Playing now..."""
+    print("")
+    print("...Let the game begin...")
+    
 print("...Card Game...")
 print()
 print("Players are: Ed, Grace, Linus")
@@ -63,64 +68,6 @@ print()
 print("Grace: ",Grace)
 print()
 print("Linus: ",Linus)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# First get the input of the arrays, randomly, but there has to be a "0" in one array out of the four
-# To do this, get a random number with 11 digits, then split them into a list, so that each can have
-# its own index.
-# Thereafter, append "0" to the list, then sort the list in ascending order
-# import random
-# random_num = random.randint(10**11, 10**13-1) # the random number with 11 digits
-# print("The random digits are: ", random_num)
-# random_num.insert(0, 0) # Append/insert 0 onto that list
-# random_num_list = sorted(random_num) # Sorting the list in ascending order
-# print("With '0' added onto the list: ", random_num_list)
-
-
-
-
-
-
-
-
-# def card_game(Ed, Grace, Linus):
-#     help("...Check for the chances of Ed winning...")
-    
-#     # Now that the list will have the 12 grades/cards, assign them to Ed, Grace, and Linus, 4 each
-# Ed = random_num_list[0:3]
-# Grace = random_num_list[4:7]
-# Linus = random_num_list[8:11]
-# # Call the function
-# print(card_game(Ed, Grace, Linus))
-
+card_game(Ed, Grace, Linus)
 
 
