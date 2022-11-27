@@ -103,11 +103,21 @@ def card_game(Ed, Grace, Linus):
         print("...Round One Closed...")
     # Getting the winner of the first round
     round_one_winner = max(round_one_scores, key=round_one_scores.get)
+    # Checking whether Ed has a chance of winning
+    if round_one_winner == "Ed":
+        print("Ed has a chance of winning")
+    else:
+        print("Not yet there, Ed")
+    print()
     print("And round one winner is {} with {} points".format(round_one_winner, round_one_scores.get(round_one_winner)))
     # View the scoreboard as the round_one_scores
     print()
     print("...Check out the scores...")
     print("The scoreboard: ", round_one_scores)
+    # Adding the winner to the general score
+    # winners = {
+    #     round_one_winner : round_one_scores.get(round_one_winner)
+    # }
     print()
     # Round Two
     print("...Round Two...")
@@ -186,12 +196,30 @@ def card_game(Ed, Grace, Linus):
 
     # Getting the winner of the second round
     round_two_winner = max(round_two_scores, key=round_two_scores.get)
+    # Checking whether Ed has a chance of winning
+    if round_two_winner != "Ed":
+        print("Oops! You missed it again, but keep trying, Ed")
+    else:
+        print("Yes, you're probably almost there, Ed")
+    print()
     print("And round two winner is {} with {} points".format(round_two_winner, round_two_scores.get(round_two_winner)))
     # View the scoreboard as the round_one_scores
     print()
     print("...Check out the scores...")
     print("The scoreboard: ", round_two_scores)
-    print()
+    # Check whether there's any player who has won two times now
+    if round_one_winner == "Ed" and round_two_winner == "Ed":
+        print("Therefore, Ed wins the game")
+        return
+    elif round_one_winner == "Grace" and round_two_winner == "Grace":
+        print("Therefore, Grace wins the game")
+        return
+    elif round_one_winner == "Linus" and round_two_winner == "Linus":
+        print("Therefore, Linus wins the game")
+        return
+    else:
+        print()
+    
     # Round three
     print("...Round Three...")
     print("Cards remaining...")
@@ -269,11 +297,29 @@ def card_game(Ed, Grace, Linus):
 
     # Getting the winner of the third round
     round_three_winner = max(round_three_scores, key=round_three_scores.get)
+    # Checking whether Ed has a chance of winning
+    if round_three_winner != "Ed":
+        print("Oops! You missed it again, you've got one more shot, Ed")
+    else:
+        print("Yes, you're probably almost there, Ed")
+    print()
     print("And round three winner is {} with {} points".format(round_three_winner, round_three_scores.get(round_two_winner)))
     # View the scoreboard as the round_three_scores
     print()
     print("...Check out the scores...")
     print("The scoreboard: ", round_three_scores)
+    # Check whether there's any player who has won two times now
+    if (round_one_winner == "Ed" or round_two_winner == "Ed") and round_three_winner == "Ed":
+        print("Therefore, Ed wins the game")
+        return
+    elif (round_one_winner == "Grace" or round_two_winner == "Grace") and round_three_winner == "Grace":
+        print("Therefore, Grace wins the game")
+        return
+    elif (round_one_winner == "Linus" or round_two_winner == "Linus") and round_three_winner == "Linus":
+        print("Therefore, Linus wins the game")
+        return
+    else:
+        print()
     print()
     # Round four
     print("...Round Four...")
@@ -352,29 +398,30 @@ def card_game(Ed, Grace, Linus):
 
     # Getting the winner of the fourth round
     round_four_winner = max(round_four_scores, key=round_four_scores.get)
+    # Checking whether Ed has a chance of winning
+    if round_four_winner != "Ed":
+        print("Oops! You missed it again, but keep trying, Ed")
+    else:
+        print("Yes, you're probably almost there, Ed")
+    print()
     print("And round four winner is {} with {} points".format(round_four_winner, round_four_scores.get(round_four_winner)))
     # View the scoreboard as the round_four_scores
     print()
     print("...Check out the scores...")
     print("The scoreboard: ", round_four_scores)
+    if (round_one_winner == "Ed" or round_two_winner == "Ed") and (round_three_winner == "Ed" or round_four_winner == "Ed"):
+        print("Therefore, Ed wins the game")
+        return
+    elif (round_one_winner == "Grace" or round_two_winner == "Grace") and (round_three_winner == "Grace" or round_four_winner == "Grace"):
+        print("Therefore, Grace wins the game")
+        return
+    elif (round_one_winner == "Linus" or round_two_winner == "Linus") and (round_three_winner == "Linus" or round_four_winner == "Ed"):
+        print("Therefore, Linus wins the game")
+        return
+    else:
+        print()
     print()
-
-
-
-
-
-
-    # Add the winners to a general dictionary
-    winners = {
-        round_one_winner : round_one_scores.get(round_one_winner),
-        round_two_winner : round_two_scores.get(round_two_winner),
-        round_three_winner : round_three_scores.get(round_two_winner),
-        round_four_winner : round_four_scores.get(round_four_winner)
-    }
-    print("General score is: ", winners)
-
-
-
+    #End of function
 print("...Card Game...")
 print()
 print("Players are: Ed, Grace, Linus")
