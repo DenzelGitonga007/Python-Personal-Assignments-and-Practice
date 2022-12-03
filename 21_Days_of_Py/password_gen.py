@@ -38,9 +38,49 @@ if level == "weak":
     # Now join the random_name to form the password
     print("And your password is: ","".join(random_name))
 
-
-else:
-    print("Strong strong...")
+else: # For strong passwords
+    # Have a list of symbols, numbers, and letters
+    # Remember, a strong password ought to have both upper and lower case letters
+    # Symbols list
+    symbols = [
+        "~", "!", "@", "$", "%", "^", "&", ",", "*", "(", ")", "–", "_", 
+        "=", "+", "[", "]", "{", "}", "{", "}", "|", ";", ":", "‘", "“", 
+        ".", "/", "<", ">", "<", ">", "?"
+    ]
+    random_symbols_1 = random.sample(symbols, 2) # get two random symbols
+    random_symbols_2 = random.sample(symbols, 2) # get another two random symbols
+    # Join the symbols
+    random_symbols_joined_1 = "".join(random_symbols_1)
+    random_symbols_joined_2 = "".join(random_symbols_2)
+    # Numbers list
+    numbers = list(str(random.randrange(1000, 9999))) # generate random 4 digits number
+    random_numbers_1 = random.sample(numbers, 2) # get two digits
+    random_numbers_2 = random.sample(numbers, 2) # get another two digits
+    # Join the numbers
+    random_numbers_joined_1 = "".join(random_numbers_1)
+    random_numbers_joined_2 = "".join(random_numbers_2)
+    # letters
+    letters = [
+        "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
+        "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+        "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
+        "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+            ]
+    # Generate random letters in both upper and lower cases
+    password_letters_1 = random.sample(letters, 4) # get two letters
+    password_letters_2 = random.sample(letters, 4) # get another two letters
+    # Join the letters
+    password_letters_joined_1 = "".join(password_letters_1)
+    password_letters_joined_2 = "".join(password_letters_2)
+    # Now join these to form a strong password
+    print("Your password is: ")
+    print(
+        "{}{}{}{}{}".
+        format(password_letters_joined_1, random_symbols_joined_1, random_numbers_joined_1,
+         password_letters_joined_2, random_numbers_joined_1, random_symbols_joined_2)
+         )
+    
+    
 
 
 
