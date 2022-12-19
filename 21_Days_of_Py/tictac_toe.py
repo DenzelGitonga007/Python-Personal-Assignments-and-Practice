@@ -22,4 +22,8 @@ while True:
     except:
         print("Please enter a numerical value only")
 
+# Print values based on size
+for borders in range(size):
+    print(" ___" * size)
+    print("|   " * (size + 1))
     
