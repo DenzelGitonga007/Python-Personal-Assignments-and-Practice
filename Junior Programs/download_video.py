@@ -2,9 +2,8 @@
 # First install pytube 3 from pip-- pip install pytube3
 # Next, import YouTube module
 from pytube import YouTube
-# Allow the program to run multiple times untill the user exits
 # Video link:
-video_link = "https://www.youtube.com/watch?v=lMAM2lbUxQU"
+video_link = input("Enter the link")
 save_location = "C:/Users/giton/OneDrive/Desktop"
 # To handle the connection errors:
 try:
