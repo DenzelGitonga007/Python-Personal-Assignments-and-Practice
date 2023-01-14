@@ -3,7 +3,7 @@
 # Next, import YouTube module
 from pytube import YouTube
 # Welcome message
-print("\n...Welcome to Denzel Audio-YouTube Downloader 🤗🎬🎶...")
+print("\n...Welcome to Denzel YouTube Downloader 🤗🎬🎶...")
 # Allow the program to run until the user exits
 rerun = "y"
 while rerun.lower() == "y":
