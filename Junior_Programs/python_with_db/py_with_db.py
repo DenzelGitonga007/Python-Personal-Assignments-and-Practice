@@ -13,6 +13,7 @@ class Database:
             database="hospital"
         )
         my_cursor = my_db.cursor()
+        mycursor.execute("CREATE DATABASE hospital") # Creates the db
 
     def __del__(self):
         #     my_db.commit() initial
