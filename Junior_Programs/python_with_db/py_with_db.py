@@ -19,6 +19,8 @@ class Database:
 
         for exist in mycursor:
             print(exist)
+        # Fill in data to the db "hospital"
+        mycursor.execute("CREATE TABLE doctor (name VARCHAR(255), speciality VARCHAR(255))")
 
     def __del__(self):
         #     my_db.commit() initial
