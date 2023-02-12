@@ -14,6 +14,11 @@ class Database:
         )
         my_cursor = my_db.cursor()
         mycursor.execute("CREATE DATABASE hospital") # Creates the db
+        # Check if db exists
+        mycursor.execute("SHOW DATABASES")
+
+        for exist in mycursor:
+            print(exist)
 
     def __del__(self):
         #     my_db.commit() initial
