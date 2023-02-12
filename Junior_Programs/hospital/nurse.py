@@ -1,7 +1,7 @@
 # Nurse details
 class Nurse:
 
-   def _init_(self, nurse):
+   def __init__(self, nurse):
       self.name = nurse['name']
       self.department = nurse['department']
 

@@ -1,6 +1,6 @@
 # Doctor details
 class Doctor:
-   def _init_(self, doctor):
+   def __init__(self, doctor):
       self.name = doctor['name']
       self.gender = doctor['gender']
       self.specialiality = doctor['specialiality']
