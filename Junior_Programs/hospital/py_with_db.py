@@ -1,14 +1,33 @@
-import mysql.connector
+# import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password=""
-)
+# mydb = mysql.connector.connect(
+#   host="localhost",
+#   user="root",
+#   password=""
+# )
 
-mycursor = mydb.cursor()
+# mycursor = mydb.cursor()
 
-mycursor.execute("CREATE DATABASE hospital")
+# mycursor.execute("CREATE DATABASE hospital")
+
+# THE ABOVE CODE CREATED THE DB
+
+# import mysql.connector
+
+# mydb = mysql.connector.connect(
+#   host="localhost",
+#   user="root",
+#   password=""
+# )
+
+# mycursor = mydb.cursor()
+
+# mycursor.execute("SHOW DATABASES")
+
+# for exist in mycursor:
+#     print(exist)
+
+# THE ABOVE CODE CONFIRMS THAT THE DB IS ACTUALLY THERE
 
 
 
