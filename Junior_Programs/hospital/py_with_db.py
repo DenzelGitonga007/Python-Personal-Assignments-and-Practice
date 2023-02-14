@@ -29,6 +29,19 @@
 
 # THE ABOVE CODE CONFIRMS THAT THE DB IS ACTUALLY THERE
 
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="hospital"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("CREATE TABLE daktari (FIRST_NAME VARCHAR(255), LAST_NAME VARCHAR(255), AGE INT(3), GENDER VARCHAR(8), SPECIALITY VARCHAR(255), INCOME decimal(15,2))")
+
 
 
 
