@@ -7,30 +7,37 @@
 # Create a function that will display employee name, total hours, hourly rate, income tax rate, income tax, and net pay, and is called inside the loop.
 # Create a function that will display total number of employees, total hours, total tax, and total net pay.
 
-def calculate_tax_and_netpay(total_hours, hourly_rate, tax_rate):
-    tax = float(total_hours) * float(hourly_rate) * (float(tax_rate) / 100)
-    net_pay = float(total_hours) * float(hourly_rate) - tax
-    return tax, net_pay
-
-def get_name():
+# Employee name
+def get_name(): # Gets and returns the name of the employee
     name = input("Enter employee name: ")
     return name
 
-def get_total_hours():
+# Hours worked
+def get_total_hours(): # Gets and returns the total number of hours worked
     total_hours = float(input("Enter total hours: "))
     return total_hours
 
-def get_hourly_rate():
+# Payment per hour
+def get_hourly_rate(): # Gets and returns the hourly rate of the employee
     hourly_rate = float(input("Enter hourly rate: "))
     return hourly_rate
 
-def get_tax_rate():
+# Tax
+def get_tax_rate(): # Gets and returns the tax rate of the employee in %
     tax_rate = float(input("Enter tax rate (in %): "))
     return tax_rate
 
-def get_gross_pay(total_hours, hourly_rate):
+# Total pay (total hours * hourly rate)
+def get_gross_pay(total_hours, hourly_rate): # Gets and returns the total pay (gross pay) of the employee
+    global gross_pay # set to global so that it can be accessed in other functions
     gross_pay = float(total_hours) * float(hourly_rate)
     return gross_pay
+
+# Net pay (gross pay - tax)
+def calculate_tax_and_netpay(total_hours, hourly_rate, tax_rate): # Gets and returns the tax and net_pay of the employee
+    tax = float(total_hours) * float(hourly_rate) * (float(tax_rate) / 100)
+    net_pay = gross_pay - tax
+    return tax, net_pay
 
 def display_employee_info(name, total_hours, hourly_rate, tax_rate, tax, gross_pay, net_pay):
     print("----------------------------------------------------")
