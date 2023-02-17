@@ -49,7 +49,7 @@ import mysql.connector
 
 #establishing the connection
 conn = mysql.connector.connect(
-   user='root', password='', host='127.0.0.1', database='hospital')
+   user='root', password='', host='localhost', database='hospital')
 
 #Creating a cursor object using the cursor() method
 cursor = conn.cursor()
